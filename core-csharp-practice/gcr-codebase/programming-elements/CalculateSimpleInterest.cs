@@ -12,6 +12,6 @@ public class CalculateSimpleInterest{
         double time = Convert.ToDouble(Console.ReadLine());
 
         double simpleInterest = (principal * rate * time) / 100;
-        Console.WriteLine($"The simple interest for principal {principal}, rate {rate}%, and time {time} years is: {simpleInterest}");
+        Console.WriteLine("The simple interest for principal is "+simpleInterest);
     }
 }

@@ -7,7 +7,7 @@ public class PerimeterOfRectangle{
         Console.WriteLine("Enter width of the rectangle:");
         double width = Convert.ToDouble(Console.ReadLine());
         double perimeter = 2 * (length + width);
-        Console.WriteLine($"The perimeter of the rectangle with length {length} and width {width} is: {perimeter}");
+        Console.WriteLine("The perimeter of the rectangle is: " + perimeter);
     }
 }
 

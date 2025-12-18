@@ -10,7 +10,6 @@ class VolumeOfCylinder{
 
         double volume = Math.PI * radius * radius * height;
 
-        Console.WriteLine("The volume of the cylinder with radius " 
-            + radius + " and height " + height + " is: " + volume);
+        Console.WriteLine("The volume of the cylinder with radius " + radius + " and height " + height + " is: " + volume);
     }
 }

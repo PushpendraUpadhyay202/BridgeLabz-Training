@@ -9,6 +9,6 @@ public class AddTwoNumbers{
         int secondnum = int.Parse(Console.ReadLine());
 
         int sum = firstnum + secondnum;
-        Console.WriteLine($"The sum of {firstnum} and {secondnum} is: {sum}");
+        Console.WriteLine("The sum of two numbers is: " + sum);
     }
 }
