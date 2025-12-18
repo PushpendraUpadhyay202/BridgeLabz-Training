@@ -1,9 +1,7 @@
 using System;
 
-class VolumeOfCylinder
-{
-    static void Main(string[] args)
-    {
+class VolumeOfCylinder{
+    static void Main(string[] args){
         Console.WriteLine("Enter radius of the cylinder:");
         double radius = Convert.ToDouble(Console.ReadLine());
 

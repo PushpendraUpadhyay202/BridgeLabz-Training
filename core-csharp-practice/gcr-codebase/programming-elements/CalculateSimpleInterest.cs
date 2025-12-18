@@ -1,9 +1,7 @@
 using System;
 
-public class CalculateSimpleInterest
-{
-    public static void Main(string[] args)
-    {
+public class CalculateSimpleInterest{
+    public static void Main(string[] args){
         Console.WriteLine("Enter principal amount:");
         double principal = Convert.ToDouble(Console.ReadLine());
 
