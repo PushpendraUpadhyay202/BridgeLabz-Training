@@ -1,4 +1,4 @@
-using Systen;
+using System;
 
 public class AreaOfTriangle
 {
@@ -8,7 +8,7 @@ public class AreaOfTriangle
         float baseOfTri = float.Parse(Console.ReadLine());
         Console.WriteLine();
         Console.Write("Enter height of triangle :");
-        float height = flaot.Parse(Console.ReadLine());
+        float height = float.Parse(Console.ReadLine());
         Console.WriteLine();
 
         // Area of a Triangle is ½ * base * height
