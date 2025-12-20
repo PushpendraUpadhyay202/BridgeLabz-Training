@@ -84,6 +84,8 @@ BridgeLabz-Training/
 │── .gitignore
 │── README.md
 
+---
+
 ## 📊 Learning Checklist
 
 - 🔧 Environment Setup  
