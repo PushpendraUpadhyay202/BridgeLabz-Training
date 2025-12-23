@@ -87,10 +87,14 @@ This repository serves as my **learning journal and practice workspace**, docume
 BridgeLabz-Training/
 │── core-csharp-practice/
 |   ├── gcr-codebase/
-|   |    ├──programming-elements
-|   |    ├──c#-programming-elements/
-|   |       ├──level1
-|   |       ├──level2
+|   |   ├──programming-elements
+|   |   ├──c#-programming-elements/
+|   |   |  ├──level1
+|   |   |  ├──level2
+|   |   ├──c#-control-flows/
+|   |   |  ├──level1
+|   |   |  ├──level2
+|   |   |  ├──level3
 │   ├── leet-code-codebase/
 │   ├── scenario-based/
 │── .gitignore
