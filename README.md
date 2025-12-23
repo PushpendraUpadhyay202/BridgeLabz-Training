@@ -62,6 +62,18 @@ This repository serves as my **learning journal and practice workspace**, docume
 
 ---
 
+### 🟢 **22 December 2025 — Control Flow Statements**
+- ✔ Learned **control flow concepts** in C#
+- ✔ Studied **decision-making statements**:
+  - `if`, `else`, `else if`, `switch`
+- ✔ Practiced **looping constructs**:
+  - `for`, `while`, `do-while`, `foreach`
+- ✔ Understood **jump and exception flow control**:
+  - `break`, `continue`, `return`
+  - `try`, `catch`, `finally`
+
+---
+
 ## 🛠️ Tech Stack
 - **Language:** C#
 - **Framework:** .NET 8
