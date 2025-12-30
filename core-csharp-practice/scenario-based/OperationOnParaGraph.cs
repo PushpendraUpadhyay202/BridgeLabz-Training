@@ -14,8 +14,8 @@ public class OperationOnParaGraph
     private static string GetInput()
     {
         Console.WriteLine("Enter the ParaGraph: ");
-        string str = Console.ReadLine();   // taking the input of paragraph
-        return str;
+        string userInput = Console.ReadLine();   // taking the input of paragraph
+        return userInput;
     }
 
     // ------------------------     MENU      -----------------------------------
