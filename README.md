@@ -74,6 +74,64 @@ This repository serves as my **learning journal and practice workspace**, docume
 
 ---
 
+### 🟢 **23 December 2025 — Arrays in C#**
+- ✔ Learned **C# arrays** and their importance
+- ✔ Created and initialized **single-dimensional arrays**
+- ✔ Accessed array elements directly and using a **`for` loop**
+- ✔ Modified array values at runtime
+- ✔ Used the **`Length` property** of arrays
+- ✔ Worked with **multi-dimensional arrays**
+- ✔ Implemented **2D arrays (matrices)** in C#
+- ✔ Accessed elements and identified the **size of multi-dimensional arrays**
+- ✔ Used **`Console.Error.WriteLine()`** for error messages
+- ✔ Applied **`Environment.Exit()`** to terminate program execution
+
+---
+
+### 🟢 **24 December 2025 — User-Defined Methods**
+- ✔ Learned how to define **user-defined methods**
+- ✔ Reused methods by **calling them multiple times**
+- ✔ Made methods more **dynamic using parameters**
+- ✔ Implemented **recursive methods**
+- ✔ Understood and used **static methods** in C#
+- ✔ Explored **.NET Standard Library methods**
+- ✔ Worked with the **`System.Math` class**
+
+---
+
+### 🟢 **26 December 2025 — Strings & Exception Handling**
+- ✔ Learned **string concepts** in C#
+- ✔ Created and initialized **string variables**
+- ✔ Used **escape sequences (`\\`)** in strings
+- ✔ Took **string input** from the user
+- ✔ Worked with **string arrays**
+- ✔ Passed strings as **method parameters**
+- ✔ Used **built-in String class methods**
+- ✔ Understood **ASCII character codes**
+- ✔ Learned **exception handling** in C#
+- ✔ Studied the **C# exception hierarchy**
+- ✔ Explored different **exception types**
+- ✔ Understood **`System.Exception` (unchecked exceptions)**
+- ✔ Learned about **checked exceptions**
+
+---
+
+### 🟢 **27 December 2025 — Built-in Functions & Date/Time**
+- ✔ Introduced commonly used **built-in classes**:
+  - `Random`
+  - `Math`
+- ✔ Learned the importance of **date and time** in applications
+- ✔ Worked with **current date and time**
+- ✔ Understood use cases like **event scheduling and time-based operations**
+
+---
+
+### 🟢 **29 December 2025 — Programming Paradigms**
+- ✔ Understood the difference between **Procedural Programming** and **Object-Oriented Programming**
+- ✔ Learned **Class and Object** fundamentals
+
+---
+
 ## 🛠️ Tech Stack
 - **Language:** C#
 - **Framework:** .NET 8
