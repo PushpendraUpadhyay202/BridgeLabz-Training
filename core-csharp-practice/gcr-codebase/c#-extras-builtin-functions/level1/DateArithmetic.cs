@@ -1,5 +1,5 @@
 using System;
-class Main{
+class DateArithmetic{
     static void Main(string[] args){
         DateTime date = DateTime.Parse(Console.ReadLine());
 
