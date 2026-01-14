@@ -132,10 +132,119 @@ This repository serves as my **learning journal and practice workspace**, docume
 
 ---
 
+### 🟢 **30 December 2025 — Constructors & Variables**
+- ✔ Learned about **constructors** in C#
+- ✔ Understood **instance variables vs static variables**
+- ✔ Revised **access modifier concepts**
+
+---
+
+### 🟢 **31 December 2025 — C# Keywords**
+- ✔ Learned the use of **`this` keyword**
+- ✔ Understood **`static` keyword**
+- ✔ Studied **`sealed` keyword**
+- ✔ Learned the **`is` operator**
+
+---
+
+### 🟢 **01 January 2026 — OOP Design & Diagrams**
+- ✔ Understood **Classes vs Objects** in C#
+- ✔ Learned **Class Diagrams**
+- ✔ Studied **Object Diagrams**
+- ✔ Explored **Sequence Diagrams**
+
+---
+
+### 🟢 **02 January 2026 — Inheritance in C#**
+- ✔ Learned about **Inheritance** in C#
+- ✔ Understood **base class and derived class** concepts
+- ✔ Studied **method overriding** and **virtual methods**
+- ✔ Explored **access modifiers** in inheritance
+- ✔ Implemented **single inheritance** and **multi-level inheritance**
+
+---
+
+### 🟢 **03 January 2026 — Encapsulation**
+- ✔ Learned what **Encapsulation** means
+- ✔ Understood **field encapsulation** using private variables
+- ✔ Learned **property encapsulation** using `get` and `set`
+- ✔ Studied **auto-implemented properties**
+- ✔ Learned why **data hiding** is important
+- ✔ Understood using **public properties** instead of public fields
+
+---
+
+### 🟢 **05 January 2026 — Abstraction & Polymorphism**
+- ✔ Learned the concept of **Abstraction**
+- ✔ Studied **abstract classes** and **interfaces**
+- ✔ Understood difference between **abstract class and interface**
+- ✔ Learned **Polymorphism**
+- ✔ Studied **method overloading**
+- ✔ Studied **method overriding**
+- ✔ Learned use of **`virtual`** and **`override`** keywords
+
+---
+
+### 🟢 **06 January 2026 — OOP Revision**
+- ✔ Revised **Encapsulation**
+- ✔ Revised **Inheritance**
+- ✔ Revised **Abstraction**
+- ✔ Revised **Polymorphism**
+- ✔ Revised **classes, objects, and constructors**
+- ✔ Practiced simple **OOP examples**
+
+---
+
+### 🟢 **07 January 2026 — Data Structures Basics**
+- ✔ Learned **Data Structures**
+- ✔ Understood **features and types** in C#
+- ✔ Learned **Linked List** concept and its use
+- ✔ Studied **Singly Linked List**
+- ✔ Studied **Doubly Linked List**
+- ✔ Studied **Circular Linked List**
+
+---
+
+### 🟢 **08 January 2026 — Stack & Queue**
+- ✔ Learned **Stack (LIFO)**
+- ✔ Studied basic **stack operations**
+- ✔ Learned **Queue (FIFO)**
+- ✔ Studied basic **queue operations**
+
+---
+
+### 🟢 **09 January 2026 — Sorting Algorithms**
+- ✔ Learned what **sorting** is
+- ✔ Studied **Bubble Sort**
+- ✔ Studied **Selection Sort**
+- ✔ Studied **Insertion Sort**
+- ✔ Studied **Merge Sort**
+- ✔ Studied **Quick Sort**
+
+---
+
+### 🟢 **12 January 2026 — Searching Algorithms**
+- ✔ Learned **Linear Search**
+- ✔ Learned **Binary Search**
+- ✔ Understood **sorted array requirement** for Binary Search
+- ✔ Studied **time complexity** of both searches
+- ✔ Understood difference between **Linear vs Binary Search**
+
+---
+
+### 🟢 **13 January 2026 — Revision**
+- ✔ Revised **Sorting Algorithms**
+- ✔ Revised **Searching Algorithms**
+
+---
+
+
+
+
 ## 🛠️ Tech Stack
 - **Language:** C#
 - **Framework:** .NET 8
-- **Tools:** Git, GitHub, VS Code, Eclipse
+- **Tools:** Git, GitHub, VS Code
 - **Operating System:** Windows
 
 ---
@@ -164,12 +273,37 @@ BridgeLabz-Training/
 
 - ✅ Environment Setup  
 - ✅ Git & GitHub Basics  
-- ✅ C# Syntax & Structure  
+- ✅ Problem Solving Practice  
+- ✅ .NET Framework Basics  
+- ✅ C# Syntax & Program Structure  
 - ✅ Data Types  
 - ✅ Operators  
-- ✅ Command-Line Input & Output
+- ✅ Command-Line Input & Output  
+- ✅ Control Flow Statements  
+- ✅ Loops & Jump Statements  
+- ✅ Arrays (1D & 2D)  
+- ✅ User-Defined Methods  
+- ✅ Built-in Classes (`Math`, `Random`)  
+- ✅ Strings & String Methods
+- ✅ Programming Paradigms  
+- ✅ Object-Oriented Programming (OOP)  
+- ✅ Constructors  
+- ✅ Access Modifiers  
+- ✅ OOP Diagrams (Class, Object, Sequence)
+- ✅ Inheritance  
+- ✅ Encapsulation  
+- ✅ Abstraction  
+- ✅ Polymorphism  
+- ✅ Data Structures Basics  
+- ✅ Linked Lists  
+- ✅ Stack  
+- ✅ Queue  
+- ✅ Sorting Algorithms  
+- ✅ Searching Algorithms  
+- ✅ Revision & Practice  
 
 ---
+
 
 ## 🌱 Continuous Learning
 
