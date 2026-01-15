@@ -13,14 +13,14 @@ namespace AddressBookSystem
         // address, city, state, zip, phone number and email
 
         //Creating Every Field Property and their getter and setter
-        private string FirstName { get; set; }
-        private string LastName { get; set; }
-        private string Address { get; set; }
-        private string City {  get; set; }
-        private string State {  get; set; }
-        private string Zip {  get; set; }
-        private string PhoneNumber {  get; set; }
-        private string Email {  get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string Address { get; set; }
+        public string City {  get; set; }
+        public string State {  get; set; }
+        public string Zip {  get; set; }
+        public string PhoneNumber {  get; set; }
+        public string Email {  get; set; }
 
 
         //Constructor to set the initial values of these above private filed Properties

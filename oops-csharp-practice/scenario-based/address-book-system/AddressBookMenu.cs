@@ -1,0 +1,47 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace AddressBookSystem
+{
+    internal class AddressBookMenu
+    {
+        private IAddressBook addressBookUtility;
+
+        public AddressBookMenu()
+        {
+            addressBookUtility = new AddressBookUtility();
+        }
+
+        public void Menu()
+        {
+            Console.WriteLine("=========   Welcome to Address Book   ==============");
+
+            while (true)
+            {
+                Console.WriteLine("1.Add Contact");
+                Console.WriteLine("2.Display All Contacts");
+                Console.WriteLine("3.Exit");
+
+                int choice = int.Parse(Console.ReadLine());
+
+                switch (choice)
+                {
+                    case 1:
+                        addressBookUtility.AddContact();
+                        break;
+                    case 2:
+                        addressBookUtility.DisplayAllContacts();
+                        break;
+                    case 3:
+                        Console.WriteLine("Exiting Program................");
+                        return;
+                    default:
+                        Console.WriteLine("Invalid Input");
+                        Console.WriteLine("Enter option from 1 to 3 Only");
+                        break;
+                }
+            }
+        }
+    }
+}
