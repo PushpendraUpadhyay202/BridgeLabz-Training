@@ -182,6 +182,29 @@ namespace AddressBookSystem
             Console.WriteLine("\nContact Deleted Successfully...\n");
         }
 
+        public void AddMultipleContacts()
+        {
+            int remainingSpaces = AddressBookMaxSize - AddressBookIndex;
+            if(remainingSpaces == 0)
+            {
+                Console.WriteLine("Contact Array is Full\n");
+                return;
+            }
+            Console.WriteLine("\nYou can add "+ remainingSpaces + " more Only\n");
+            Console.Write("Enter the number of Contacts you want to add: \n");
+            int number = int.Parse(Console.ReadLine());
+
+            if (number > (remainingSpaces))
+            {
+                Console.WriteLine("Please Enter a number less than "+ remainingSpaces+"\n");
+                return;
+            }
+            for (int i = 0; i < number; i++)
+            {
+                AddContact();
+            }
+        }
+
         // Helper method for DeleteContact method to find the index of a contact given its first name
         // Returns the contact index if the contact is found in the array
         // Return -1 otherwise
