@@ -8,5 +8,7 @@ namespace AddressBookSystem
     {
         void AddContact();
         void DisplayAllContacts();
+
+        void EditExitingContact();
     }
 }

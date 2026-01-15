@@ -21,7 +21,8 @@ namespace AddressBookSystem
             {
                 Console.WriteLine("1.Add Contact");
                 Console.WriteLine("2.Display All Contacts");
-                Console.WriteLine("3.Exit");
+                Console.WriteLine("3.Edit Exiting Contact");
+                Console.WriteLine("4.Exit");
 
                 int choice = int.Parse(Console.ReadLine());
 
@@ -34,6 +35,9 @@ namespace AddressBookSystem
                         addressBookUtility.DisplayAllContacts();
                         break;
                     case 3:
+                        addressBookUtility.EditExitingContact();
+                        break;
+                    case 4:
                         Console.WriteLine("Exiting Program................");
                         return;
                     default:
