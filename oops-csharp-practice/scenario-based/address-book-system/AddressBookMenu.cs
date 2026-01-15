@@ -22,7 +22,8 @@ namespace AddressBookSystem
                 Console.WriteLine("1.Add Contact");
                 Console.WriteLine("2.Display All Contacts");
                 Console.WriteLine("3.Edit Exiting Contact");
-                Console.WriteLine("4.Exit");
+                Console.WriteLine("4.Delete a Contact");
+                Console.WriteLine("5.Exit");
 
                 int choice = int.Parse(Console.ReadLine());
 
@@ -38,11 +39,14 @@ namespace AddressBookSystem
                         addressBookUtility.EditExitingContact();
                         break;
                     case 4:
+                        addressBookUtility.DeleteContact();
+                        break;
+                    case 5:
                         Console.WriteLine("Exiting Program................");
                         return;
                     default:
                         Console.WriteLine("Invalid Input");
-                        Console.WriteLine("Enter option from 1 to 3 Only");
+                        Console.WriteLine("Enter option from 1 to 5 Only");
                         break;
                 }
             }

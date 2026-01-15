@@ -148,6 +148,53 @@ namespace AddressBookSystem
             while (choice !=0);
         }
 
+        public void DeleteContact()
+        {
+            if(AddressBookIndex == 0)
+            {
+                Console.WriteLine("\nThere are NO contacts in the address book...\n");
+                return;
+            }
+
+            Console.WriteLine("==========    Contact Deletion Window    ==============");
+            Console.Write("Enter the first name: ");
+            string name = Console.ReadLine();
+
+            int contactIndex = FindContactIndex(name);
+
+            if(contactIndex == -1)
+            {
+                Console.WriteLine("\nContact with this first name doesn't exist\n");
+                return;
+            }
+
+            //Deletion Logic:
+            //Shift all contacts after the deleted index one position left.
+            //Reduce AddressBookIndex by 1 to remove the duplicate last entry.
+            for (int i = contactIndex; i < AddressBookIndex && i < AddressBookMaxSize - 1; i++)
+            {
+                Contacts[i] = Contacts[i + 1];
+            }
+
+            AddressBookIndex--;
+            FirstAddressBook.CurrentIndex = AddressBookIndex;
+
+            Console.WriteLine("\nContact Deleted Successfully...\n");
+        }
+
+        // Helper method for DeleteContact method to find the index of a contact given its first name
+        // Returns the contact index if the contact is found in the array
+        // Return -1 otherwise
+        private int FindContactIndex(string firstName)
+        {
+            for (int i = 0; i < AddressBookIndex; i++)
+            {
+                if (Contacts[i].FirstName.Equals(firstName)) return i;
+            }
+
+            return -1;
+        }
+
         // Helper method for EditExistingContact method to find a contact given its name
         // Returns the contact if the contact is found in the array
         // Returns null otherwise
