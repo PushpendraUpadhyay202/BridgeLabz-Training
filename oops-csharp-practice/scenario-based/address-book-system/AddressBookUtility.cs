@@ -350,6 +350,50 @@ namespace AddressBookSystem
             Console.WriteLine("\n");
         }
 
+        public void SortContactsAlphabeticallyByFirstName()
+        {
+            Console.WriteLine("\n==== Result of sorting contacts.");
+            for (int i = 0; i < AddressBookArrayIndex; i++)
+            {
+                QuickSort(AddressBooks[i].Contacts, 0, AddressBooks[i].CurrentIndex - 1);
+            }
+            DisplayAllContacts();
+        }
+
+        private void QuickSort(Contact[] contacts, int left, int right)
+        {
+            if (left >= right)
+            {
+                return;
+            }
+
+            int pivotIndex = Partition(contacts, left, right);
+
+            QuickSort(contacts, left, pivotIndex - 1);
+            QuickSort(contacts, pivotIndex + 1, right);
+        }
+
+        private int Partition(Contact[] contacts, int left, int right)
+        {
+            Contact pivot = contacts[right];
+            int boundary = left - 1;
+
+            for (int i = left; i <= right - 1; i++)
+            {
+                if (String.Compare(contacts[i].FirstName, pivot.FirstName) < 0)
+                {
+                    boundary++;
+                    // Swapping
+                    Contact temp = contacts[i];
+                    contacts[i] = contacts[boundary];
+                    contacts[boundary] = temp;
+                }
+            }
+            contacts[right] = contacts[boundary + 1];
+            contacts[boundary + 1] = pivot;
+
+            return boundary + 1;
+        }
 
         // Helper method for DeleteContact method to find the index of a contact given its first name
         // Returns the contact index if the contact is found in the array

@@ -23,5 +23,7 @@ namespace AddressBookSystem
         void SearchContactInCityOrState();
 
         void CountContactsByCityOrState();
+
+        void SortContactsAlphabeticallyByFirstName();
     }
 }

@@ -29,7 +29,8 @@ namespace AddressBookSystem
                 Console.WriteLine("8. List all contacts in a city or state.");
                 Console.WriteLine("9. Search a contact by first name and city or state.");
                 Console.WriteLine("10. Count contacts in a city or state.");
-                Console.WriteLine("11.Exit");
+                Console.WriteLine("11. Display all contacts in lexographically sorted order.");
+                Console.WriteLine("12.Exit");
 
                 int choice = int.Parse(Console.ReadLine());
 
@@ -66,6 +67,9 @@ namespace AddressBookSystem
                         addressBookUtility.CountContactsByCityOrState();
                         break;
                     case 11:
+                        addressBookUtility.SortContactsAlphabeticallyByFirstName();
+                        break;
+                    case 12:
                         Console.WriteLine("Exiting Program................");
                         return;
                     default:
