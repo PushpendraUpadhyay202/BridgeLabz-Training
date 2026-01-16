@@ -307,6 +307,27 @@ namespace AddressBookSystem
             }
         }
 
+        public void CountContactsByCityOrState()
+        {
+            Console.WriteLine("\n==== Count Contacts By City or State name ====\n");
+            Console.Write("Please enter the city or state name: ");
+            string searchQuery = Console.ReadLine();
+            int contactsCount = 0;
+
+            for (int i = 0; i < AddressBookArrayIndex; i++)
+            {
+                for (int j = 0; j < AddressBooks[i].CurrentIndex; j++)
+                {
+                    if (AddressBooks[i].Contacts[j].City.Equals(searchQuery) || AddressBooks[i].Contacts[j].State.Equals(searchQuery))
+                    {
+                        contactsCount++;
+                    }
+                }
+            }
+
+            Console.WriteLine($"\nThe number of contacts residing in {searchQuery} is: {contactsCount}\n");
+        }
+
         public void ListAllContactsInCityOrState()
         {
             Console.WriteLine("\n==== List all contacts in a city or state ====\n");

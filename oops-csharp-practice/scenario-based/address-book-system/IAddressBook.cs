@@ -21,5 +21,7 @@ namespace AddressBookSystem
         void ListAllContactsInCityOrState();
 
         void SearchContactInCityOrState();
+
+        void CountContactsByCityOrState();
     }
 }

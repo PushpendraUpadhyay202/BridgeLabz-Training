@@ -28,7 +28,8 @@ namespace AddressBookSystem
                 Console.WriteLine("7. Create an Address Book.");
                 Console.WriteLine("8. List all contacts in a city or state.");
                 Console.WriteLine("9. Search a contact by first name and city or state.");
-                Console.WriteLine("10.Exit");
+                Console.WriteLine("10. Count contacts in a city or state.");
+                Console.WriteLine("11.Exit");
 
                 int choice = int.Parse(Console.ReadLine());
 
@@ -62,6 +63,9 @@ namespace AddressBookSystem
                         addressBookUtility.SearchContactInCityOrState();
                         break;
                     case 10:
+                        addressBookUtility.CountContactsByCityOrState();
+                        break;
+                    case 11:
                         Console.WriteLine("Exiting Program................");
                         return;
                     default:
