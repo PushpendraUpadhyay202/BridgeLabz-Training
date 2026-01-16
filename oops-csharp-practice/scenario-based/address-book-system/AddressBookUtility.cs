@@ -45,6 +45,13 @@ namespace AddressBookSystem
 
             Console.Write("Enter first name: ");
             string firstName = Console.ReadLine();
+
+            if (IsDuplicate(firstName, addressBookName))
+            {
+                Console.WriteLine("\nA contact with same first name already exist.\n");
+                return;
+            }
+
             Console.Write("Enter last name: ");
             string lastName = Console.ReadLine();
             Console.Write("Enter address: ");
@@ -366,6 +373,23 @@ namespace AddressBookSystem
                 }
             }
             Console.WriteLine();
+        }
+
+        // Checks if a contact with the same first name alread exists
+        // If exists, return true
+        // Else returns false;
+        private bool IsDuplicate(string firstName, string addressBookName)
+        {
+            AddressBook addressBook = FindAddressBookByName(addressBookName);
+
+            for (int i = 0; i < addressBook.CurrentIndex; i++)
+            {
+                if (addressBook.Contacts[i].FirstName.Equals(firstName))
+                {
+                    return true;
+                }
+            }
+            return false;
         }
     }
 }
