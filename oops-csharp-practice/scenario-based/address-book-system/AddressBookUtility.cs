@@ -285,6 +285,28 @@ namespace AddressBookSystem
             }
         }
 
+        public void ListAllContactsInCityOrState()
+        {
+            Console.WriteLine("\n==== Search by city or state ====\n");
+            Console.Write("Please enter city or state: ");
+            string searchQuery = Console.ReadLine();
+            Console.WriteLine($"\nHere are all the contacts that reside in {searchQuery}:\n");
+
+            // Looking for cities or states which are equal to searchQuery and displaying all such contacts
+            for (int i = 0; i < AddressBookArrayIndex; i++)
+            {
+                for (int j = 0; j < AddressBooks[i].CurrentIndex; j++)
+                {
+                    if (AddressBooks[i].Contacts[j].City.Equals(searchQuery) || AddressBooks[i].Contacts[j].State.Equals(searchQuery))
+                    {
+                        Console.WriteLine(AddressBooks[i].Contacts[j]);
+                    }
+                }
+            }
+
+            Console.WriteLine("\n");
+        }
+
 
         // Helper method for DeleteContact method to find the index of a contact given its first name
         // Returns the contact index if the contact is found in the array
