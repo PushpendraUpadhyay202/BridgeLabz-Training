@@ -7,60 +7,99 @@ namespace AddressBookSystem
 {
     internal class AddressBookUtility : IAddressBook
     {
-        private AddressBook FirstAddressBook;
-        private Contact[] Contacts;
-        private int AddressBookMaxSize;
-        private int AddressBookIndex;
+        private AddressBook[] AddressBooks;
+        private int AddressBookArrayIndex;
 
         public AddressBookUtility()
         {
-            FirstAddressBook = AddressBookMain.FirstAddressBook;
-            AddressBookMaxSize = AddressBookMain.FirstAddressBook.MaxSize;
-            AddressBookIndex = AddressBookMain.FirstAddressBook.CurrentIndex;
-            Contacts = AddressBookMain.FirstAddressBook.Contacts;
+            AddressBooks = AddressBookMain.AddressBooks;
+            AddressBookArrayIndex = AddressBookMain.AddressBookArrayIndex;
 
         }
+
         public void AddContact()
         {
-            Console.WriteLine("===========   Contact Add Window   ==============");
+            Console.WriteLine("\n===========   Contact Add Window   ==============\n");
+            Console.Write("Enter address book name (press enter for default): ");
+            string addressBookName = Console.ReadLine();
 
-            if(AddressBookIndex >= AddressBookMaxSize)
+            if (addressBookName == "") addressBookName = "default";
+
+            AddressBook addressBook = FindAddressBookByName(addressBookName);
+
+            if (addressBook == null)
             {
-                Console.WriteLine("Contact Array is Full\n");
-                
+                Console.WriteLine("\nAddress book with this name doesn't exist.\n");
+                return;
             }
-            else
+
+            int addressBookIndex = addressBook.CurrentIndex;
+            int addressBookMaxSize = addressBook.MaxSize;
+            Contact[] contacts = addressBook.Contacts;
+
+            if (addressBookIndex >= addressBookMaxSize)
             {
-                Console.Write("Enter first name: ");
-                string firstName = Console.ReadLine();
-                Console.Write("Enter last name: ");
-                string lastName = Console.ReadLine();
-                Console.Write("Enter address: ");
-                string address = Console.ReadLine();
-                Console.Write("Enter city name: ");
-                string city = Console.ReadLine();
-                Console.Write("Enter state name: ");
-                string state = Console.ReadLine();
-                Console.Write("Enter Zip code: ");
-                string zip = Console.ReadLine();
-                Console.Write("Enter Phone number: ");
-                string phoneNumber = Console.ReadLine();
-                Console.Write("Enter Email: ");
-                string email = Console.ReadLine();
+                Console.WriteLine("\nContact array is full.\n");
+                return;
+            }
 
-                Contact newContact = new Contact(firstName, lastName, address, city, state, zip, phoneNumber, email);
+            Console.Write("Enter first name: ");
+            string firstName = Console.ReadLine();
+            Console.Write("Enter last name: ");
+            string lastName = Console.ReadLine();
+            Console.Write("Enter address: ");
+            string address = Console.ReadLine();
+            Console.Write("Enter city name: ");
+            string city = Console.ReadLine();
+            Console.Write("Enter state name: ");
+            string state = Console.ReadLine();
+            Console.Write("Enter Zip code: ");
+            string zip = Console.ReadLine();
+            Console.Write("Enter Phone number: ");
+            string phoneNumber = Console.ReadLine();
+            Console.Write("Enter Email: ");
+            string email = Console.ReadLine();
 
+            Contact newContact = new Contact(firstName, lastName, address, city, state, zip, phoneNumber, email);
 
-                Contacts[AddressBookIndex++] = newContact;
-                FirstAddressBook.CurrentIndex = AddressBookIndex;
+            contacts[addressBookIndex] = newContact;
+            addressBook.CurrentIndex = addressBookIndex + 1;
 
-                Console.WriteLine("Contact Added SuccessFully");
+            Console.WriteLine("\nContact added successfully.\n");
+        }
+
+        public void ListAllAddressBooks()
+        {
+            Console.WriteLine("\nHere is a list of all the address books: \n");
+            for (int i = 0; i < AddressBookArrayIndex; i++)
+            {
+                Console.WriteLine($"Address Book Name: {AddressBooks[i].AddressBookName}");
             }
         }
 
-        public void EditExitingContact()
+        public void CreateAddressBook()
         {
-            if(AddressBookIndex == 0)
+            if (AddressBookArrayIndex >= AddressBooks.Length)
+            {
+                Console.WriteLine("\nAddress book array is already full. You cannot create any more address books.\n");
+                return;
+            }
+
+            Console.WriteLine("\n==== Address Book Creation Window ====\n");
+            Console.Write("Please enter address book max capacity: ");
+            int addressBookMaxCapacity = int.Parse(Console.ReadLine());
+            Console.Write("Please enter address book name: ");
+            string addressBookName = Console.ReadLine();
+
+            AddressBook NewAddressBook = new AddressBook(addressBookMaxCapacity, addressBookName);
+
+            AddressBooks[AddressBookArrayIndex++] = NewAddressBook;
+        }
+
+
+        public void EditExistingContact()
+        {
+            if (AddressBookArrayIndex == 0)
             {
                 Console.WriteLine("\nThere are NO contacts in the address book...\n");
                 return;
@@ -81,138 +120,180 @@ namespace AddressBookSystem
             int choice;
             do
             {
-                Console.WriteLine("1. Edit first name.");
+                Console.WriteLine("\n1. Edit first name.");
                 Console.WriteLine("2. Edit last name.");
-                Console.WriteLine("3. Edit Address.");
+                Console.WriteLine("3. Edit address.");
                 Console.WriteLine("4. Edit city name.");
                 Console.WriteLine("5. Edit state name.");
-                Console.WriteLine("6. Edit zip.");
+                Console.WriteLine("6. Edit zip code.");
                 Console.WriteLine("7. Edit phone number.");
-                Console.WriteLine("8. Edit Email.");
+                Console.WriteLine("8. Edit email.");
                 Console.WriteLine("0. Cancel Edit");
 
                 Console.Write("\nPlease enter your choice: ");
                 choice = int.Parse(Console.ReadLine());
                 Console.WriteLine();
 
-
                 switch (choice)
                 {
                     case 1:
                         Console.Write("Please enter updated first name: ");
-                        string firstName = Console.ReadLine();
-                        contact.FirstName = firstName;
+                        contact.FirstName = Console.ReadLine();
                         break;
+
                     case 2:
                         Console.Write("Please enter updated last name: ");
-                        string lastName = Console.ReadLine();
-                        contact.LastName = lastName;
+                        contact.LastName = Console.ReadLine();
                         break;
+
                     case 3:
                         Console.Write("Please enter updated address: ");
-                        string address = Console.ReadLine();
-                        contact.Address = address;
+                        contact.Address = Console.ReadLine();
                         break;
+
                     case 4:
                         Console.Write("Please enter updated city name: ");
-                        string cityName = Console.ReadLine();
-                        contact.City = cityName;
+                        contact.City = Console.ReadLine();
                         break;
+
                     case 5:
                         Console.Write("Please enter updated state name: ");
-                        string stateName = Console.ReadLine();
-                        contact.State = stateName;
+                        contact.State = Console.ReadLine();
                         break;
+
                     case 6:
                         Console.Write("Please enter updated zip code: ");
-                        string zip = Console.ReadLine();
-                        contact.Zip = zip;
+                        contact.Zip = Console.ReadLine();
                         break;
+
                     case 7:
                         Console.Write("Please enter updated phone number: ");
-                        string phoneNumber = Console.ReadLine();
-                        contact.PhoneNumber = phoneNumber;
+                        contact.PhoneNumber = Console.ReadLine();
                         break;
+
                     case 8:
                         Console.Write("Please enter updated email: ");
-                        string email = Console.ReadLine();
-                        contact.Email= email;
+                        contact.Email = Console.ReadLine();
                         break;
+
                     case 0:
-                        Console.WriteLine("Exiting.........");
-                        return;
+                        Console.WriteLine("Exiting edit mode...");
+                        break;
+
+                    default:
+                        Console.WriteLine("Invalid choice. Try again.");
+                        break;
                 }
 
-                Console.WriteLine("\nContact Updated Successfully...\n");
-            }
-            while (choice !=0);
+                if (choice != 0)
+                {
+                    Console.WriteLine("\nContact Updated Successfully...\n");
+                }
+
+            } while (choice != 0);
         }
+
 
         public void DeleteContact()
         {
-            if(AddressBookIndex == 0)
+            Console.WriteLine("==========    Contact Deletion Window    ==============");
+            Console.Write("Enter address book name: ");
+            string bookName = Console.ReadLine();
+
+            AddressBook addressBook = FindAddressBookByName(bookName);
+
+            if (addressBook == null)
+            {
+                Console.WriteLine("\nAddress book with this name doesn't exist.\n");
+                return;
+            }
+
+            if (addressBook.CurrentIndex == 0)
             {
                 Console.WriteLine("\nThere are NO contacts in the address book...\n");
                 return;
             }
 
-            Console.WriteLine("==========    Contact Deletion Window    ==============");
             Console.Write("Enter the first name: ");
             string name = Console.ReadLine();
 
             int contactIndex = FindContactIndex(name);
 
-            if(contactIndex == -1)
+            if (contactIndex == -1)
             {
                 Console.WriteLine("\nContact with this first name doesn't exist\n");
                 return;
             }
 
-            //Deletion Logic:
-            //Shift all contacts after the deleted index one position left.
-            //Reduce AddressBookIndex by 1 to remove the duplicate last entry.
-            for (int i = contactIndex; i < AddressBookIndex && i < AddressBookMaxSize - 1; i++)
+            Contact[] contacts = addressBook.Contacts;
+
+            // Deletion Logic:
+            // Shift contacts left to overwrite the deleted contact
+            for (int i = contactIndex; i < addressBook.CurrentIndex - 1; i++)
             {
-                Contacts[i] = Contacts[i + 1];
+                contacts[i] = contacts[i + 1];
             }
 
-            AddressBookIndex--;
-            FirstAddressBook.CurrentIndex = AddressBookIndex;
+            // Update index of that address book
+            addressBook.CurrentIndex--;
 
             Console.WriteLine("\nContact Deleted Successfully...\n");
         }
 
+
         public void AddMultipleContacts()
         {
-            int remainingSpaces = AddressBookMaxSize - AddressBookIndex;
-            if(remainingSpaces == 0)
+            Console.Write("\nPlease enter address book name: ");
+            string bookName = Console.ReadLine();
+
+            AddressBook addressBook = FindAddressBookByName(bookName);
+
+            if (addressBook == null)
             {
-                Console.WriteLine("Contact Array is Full\n");
+                Console.WriteLine("\nAddress book with given name doesn't exist.\n");
                 return;
             }
-            Console.WriteLine("\nYou can add "+ remainingSpaces + " more Only\n");
-            Console.Write("Enter the number of Contacts you want to add: \n");
+
+            int remainingSpaces = addressBook.MaxSize - addressBook.CurrentIndex;
+
+            if (remainingSpaces == 0)
+            {
+                Console.WriteLine("\nContact Array is Full\n");
+                return;
+            }
+
+            Console.WriteLine("\nYou can add only " + remainingSpaces + " more contacts\n");
+            Console.Write("Enter the number of contacts you want to add: ");
             int number = int.Parse(Console.ReadLine());
 
-            if (number > (remainingSpaces))
+            if (number > remainingSpaces)
             {
-                Console.WriteLine("Please Enter a number less than "+ remainingSpaces+"\n");
+                Console.WriteLine("\nPlease enter a number less than or equal to " + remainingSpaces + "\n");
                 return;
             }
+
             for (int i = 0; i < number; i++)
             {
                 AddContact();
             }
         }
 
+
         // Helper method for DeleteContact method to find the index of a contact given its first name
         // Returns the contact index if the contact is found in the array
         // Return -1 otherwise
         private int FindContactIndex(string firstName)
         {
-            for (int i = 0; i < AddressBookIndex; i++)
+            for (int i = 0; i < AddressBookArrayIndex; i++)
             {
-                if (Contacts[i].FirstName.Equals(firstName)) return i;
+                for (int j = 0; j < AddressBooks[i].CurrentIndex; j++)
+                {
+                    Console.WriteLine();
+                    if (AddressBooks[i].Contacts[j].FirstName.Equals(firstName))
+                    {
+                        return j;
+                    }
+                }
             }
 
             return -1;
@@ -221,28 +302,68 @@ namespace AddressBookSystem
         // Helper method for EditExistingContact method to find a contact given its name
         // Returns the contact if the contact is found in the array
         // Returns null otherwise
-        private Contact FindContactByName(string name)
+        private Contact FindContactByName(string firstname)
         {
-            for (int i = 0; i < AddressBookIndex; i++)
+            for (int i = 0; i < AddressBookArrayIndex; i++)
             {
-                if (Contacts[i].FirstName.Equals(name)) return Contacts[i];
+                for (int j = 0; j < AddressBooks[i].CurrentIndex; j++)
+                {
+                    Console.WriteLine();
+                    if (AddressBooks[i].Contacts[j].FirstName.Equals(firstname))
+                    {
+                        return AddressBooks[i].Contacts[j];
+                    }
+                }
             }
 
             return null;
         }
 
+        private AddressBook FindAddressBookByName(string addressBookName)
+        {
+            for (int i = 0; i < AddressBookArrayIndex; i++)
+            {
+                if (AddressBooks[i].AddressBookName.Equals(addressBookName))
+                {
+                    return AddressBooks[i];
+                }
+            }
+            return null;
+        }
+
+        private AddressBook FindAddressBookByContactName(string firstName)
+        {
+            for (int i = 0; i < AddressBookArrayIndex; i++)
+            {
+                for (int j = 0; j < AddressBooks[i].CurrentIndex; j++)
+                {
+                    Console.WriteLine();
+                    if (AddressBooks[i].Contacts[j].FirstName.Equals(firstName))
+                    {
+                        return AddressBooks[i];
+                    }
+                }
+            }
+
+            return null;
+        }
 
         public void DisplayAllContacts()
         {
-            if(AddressBookIndex  == 0)
+            if(AddressBookArrayIndex == 0)
             {
                 Console.WriteLine("\nThere are NO contacts in the address book...\n");
                 return;
             }
             Console.WriteLine("All Contacts are :");
-            for(int i = 0; i < AddressBookIndex; i++)
+            for(int i = 0; i < AddressBookArrayIndex; i++)
             {
-                Console.WriteLine(Contacts[i]);
+                AddressBook addressBook = AddressBooks[i];
+                Console.WriteLine($"\nBook Name: {addressBook.AddressBookName}");
+                for (int j = 0; j < addressBook.CurrentIndex; j++)
+                {
+                    Console.WriteLine(addressBook.Contacts[j]);
+                }
             }
             Console.WriteLine();
         }

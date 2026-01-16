@@ -9,10 +9,13 @@ namespace AddressBookSystem
         void AddContact();
         void DisplayAllContacts();
 
-        void EditExitingContact();
+        void EditExistingContact();
 
         void DeleteContact();
 
         void AddMultipleContacts();
+
+        void ListAllAddressBooks();
+        void CreateAddressBook();
     }
 }
