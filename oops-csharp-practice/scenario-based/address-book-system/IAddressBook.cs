@@ -19,5 +19,7 @@ namespace AddressBookSystem
         void CreateAddressBook();
 
         void ListAllContactsInCityOrState();
+
+        void SearchContactInCityOrState();
     }
 }

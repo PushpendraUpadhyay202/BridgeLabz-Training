@@ -285,9 +285,31 @@ namespace AddressBookSystem
             }
         }
 
+        public void SearchContactInCityOrState()
+        {
+            Console.WriteLine("\n==== Search a contact in a city or state ====\n");
+            Console.Write("Enter Contact's first name: ");
+            string firstName = Console.ReadLine();
+            Console.Write("Enter Contact's city or state name: ");
+            string cityOrStateName = Console.ReadLine();
+            Console.WriteLine("\nHere is the result: \n");
+
+            // Looking for the given contact in the given city or state
+            for (int i = 0; i < AddressBookArrayIndex; i++)
+            {
+                for (int j = 0; j < AddressBooks[i].CurrentIndex; j++)
+                {
+                    if (AddressBooks[i].Contacts[j].FirstName.Equals(firstName) && (AddressBooks[i].Contacts[j].City.Equals(cityOrStateName) || AddressBooks[i].Contacts[j].State.Equals(cityOrStateName)))
+                    {
+                        Console.WriteLine(AddressBooks[i].Contacts[j]);
+                    }
+                }
+            }
+        }
+
         public void ListAllContactsInCityOrState()
         {
-            Console.WriteLine("\n==== Search by city or state ====\n");
+            Console.WriteLine("\n==== List all contacts in a city or state ====\n");
             Console.Write("Please enter city or state: ");
             string searchQuery = Console.ReadLine();
             Console.WriteLine($"\nHere are all the contacts that reside in {searchQuery}:\n");
