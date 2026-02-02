@@ -310,6 +310,37 @@ This repository serves as my **learning journal and practice workspace**, docume
 
 ---
 
+### 🟢 21 January 2026 — Streams & Merge Sort (Scenario Based)
+- ✔ Learned Streams for functional-style data processing
+- ✔ Used Streams for filtering, mapping, and collecting data
+- ✔ Improved code readability using Stream pipelines
+- ✔ Understood lazy evaluation in Streams
+- ✔ Applied Streams on large datasets
+- ✔ Designed EduResults – Rank Sheet Generator
+- ✔ Used Merge Sort for large student datasets
+- ✔ Merged multiple sorted district-wise lists
+- ✔ Maintained stable sorting for duplicate scores
+- ✔ Handled large-scale data efficiently
+
+---
+
+### 🟢 22 January 2026 — Exception Handling
+- ✔ Learned exception handling concepts
+- ✔ Used try, catch, finally blocks
+- ✔ Understood checked vs unchecked exceptions
+- ✔ Created custom exceptions
+- ✔ Handled runtime failures gracefully
+- ✔ AmbulanceRoute – Emergency Patient Navigation
+- ✔ Modeled hospital units using Circular Linked List
+- ✔ Represented each hospital unit as a node
+- ✔ Rotated through units to find nearest available unit
+- ✔ Simulated patient redirection in circular path
+- ✔ Removed units dynamically during maintenance
+- ✔ Ensured continuous emergency flow handling
+
+---
+
+
 ## 🛠️ Tech Stack
 - **Language:** C#
 - **Framework:** .NET 8
