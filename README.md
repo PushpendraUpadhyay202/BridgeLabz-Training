@@ -239,8 +239,76 @@ This repository serves as my **learning journal and practice workspace**, docume
 
 ---
 
+### 🟢 **14 January 2026 — Address Book System**
+- ✔ Designed Address Book System using OOP principles
+- ✔ Used classes and objects to model contacts
+- ✔ Stored and managed contact details using arrays
+- ✔ Implemented add, update, delete, and view operations
+- ✔ Maintained separate address books (Personal, Office, Family)
+- ✔ Focused on clean structure and responsibility separation
 
+---
 
+### 🟢 **15 January 2026 — BrowserBuddy (Doubly Linked List + Stack)**
+- ✔ Designed browser tab history manager
+- ✔ Used Doubly Linked List for back and forward navigation
+- ✔ Used Stack to store recently closed tabs
+- ✔ Supported Back and Forward operations
+- ✔ Implemented restore closed tabs
+- ✔ Ensured memory-efficient navigation
+
+---
+
+### 🟢 **16 January 2026 — Real-World Scenario Questions**
+- ✔ Implemented TrafficManager using Circular Linked List
+- ✔ Used Queue to manage waiting vehicles
+- ✔ Supported dynamic vehicle entry and exit
+- ✔ Handled queue overflow and underflow
+- ✔ Printed current state of roundabout
+- ✔ Designed BookShelf system using HashMap and LinkedList
+- ✔ Maintained genre-wise book catalog
+- ✔ Supported borrow and return operations
+- ✔ Avoided duplication using HashSet
+
+---
+
+### 🟢 **17 January 2026 — Sorting (Scenario Based)**
+- ✔ Used Quick Sort for large datasets (FlashDealz)
+- ✔ Optimized sorting for average-case performance
+- ✔ Sorted products based on discount
+- ✔ Used Bubble Sort for small datasets (FitnessTracker)
+- ✔ Handled frequent updates and real-time ranking
+
+---
+
+### 🟢 **19 January 2026 — Generics, Linked List & Stack**
+- ✔ Learned Generics for type safety
+- ✔ Improved code reusability using generics
+- ✔ Avoided runtime casting errors
+- ✔ Implemented ParcelTracker using Singly Linked List
+- ✔ Tracked parcel stages sequentially
+- ✔ Added custom intermediate checkpoints
+- ✔ Handled null pointers for missing parcels
+- ✔ Designed ExamProctor using Stack and HashMap
+- ✔ Tracked question navigation using Stack
+- ✔ Stored answers using HashMap
+- ✔ Automated score calculation using functions
+
+---
+
+### 🟢 **20 January 2026 — Collections**
+- ✔ Studied Collections Framework
+- ✔ Learned List, Set, and Map interfaces
+- ✔ Compared ArrayList, LinkedList, HashSet, and HashMap
+- ✔ Implemented Radix Sort for Aadhaar numbers in AadharCardSystem
+- ✔ Maintained stable sorting
+- ✔ Applied Binary Search after sorting
+- ✔ Implemented Password Cracker using Backtracking
+- ✔ Generated all possible combinations
+- ✔ Used recursion with early stopping
+- ✔ Analyzed time and space complexity
+
+---
 
 ## 🛠️ Tech Stack
 - **Language:** C#
