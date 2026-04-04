@@ -239,6 +239,106 @@ This repository serves as my **learning journal and practice workspace**, docume
 
 ---
 
+### 🟢 **14 January 2026 — Address Book System**
+- ✔ Designed Address Book System using OOP principles
+- ✔ Used classes and objects to model contacts
+- ✔ Stored and managed contact details using arrays
+- ✔ Implemented add, update, delete, and view operations
+- ✔ Maintained separate address books (Personal, Office, Family)
+- ✔ Focused on clean structure and responsibility separation
+
+---
+
+### 🟢 **15 January 2026 — BrowserBuddy (Doubly Linked List + Stack)**
+- ✔ Designed browser tab history manager
+- ✔ Used Doubly Linked List for back and forward navigation
+- ✔ Used Stack to store recently closed tabs
+- ✔ Supported Back and Forward operations
+- ✔ Implemented restore closed tabs
+- ✔ Ensured memory-efficient navigation
+
+---
+
+### 🟢 **16 January 2026 — Real-World Scenario Questions**
+- ✔ Implemented TrafficManager using Circular Linked List
+- ✔ Used Queue to manage waiting vehicles
+- ✔ Supported dynamic vehicle entry and exit
+- ✔ Handled queue overflow and underflow
+- ✔ Printed current state of roundabout
+- ✔ Designed BookShelf system using HashMap and LinkedList
+- ✔ Maintained genre-wise book catalog
+- ✔ Supported borrow and return operations
+- ✔ Avoided duplication using HashSet
+
+---
+
+### 🟢 **17 January 2026 — Sorting (Scenario Based)**
+- ✔ Used Quick Sort for large datasets (FlashDealz)
+- ✔ Optimized sorting for average-case performance
+- ✔ Sorted products based on discount
+- ✔ Used Bubble Sort for small datasets (FitnessTracker)
+- ✔ Handled frequent updates and real-time ranking
+
+---
+
+### 🟢 **19 January 2026 — Generics, Linked List & Stack**
+- ✔ Learned Generics for type safety
+- ✔ Improved code reusability using generics
+- ✔ Avoided runtime casting errors
+- ✔ Implemented ParcelTracker using Singly Linked List
+- ✔ Tracked parcel stages sequentially
+- ✔ Added custom intermediate checkpoints
+- ✔ Handled null pointers for missing parcels
+- ✔ Designed ExamProctor using Stack and HashMap
+- ✔ Tracked question navigation using Stack
+- ✔ Stored answers using HashMap
+- ✔ Automated score calculation using functions
+
+---
+
+### 🟢 **20 January 2026 — Collections**
+- ✔ Studied Collections Framework
+- ✔ Learned List, Set, and Map interfaces
+- ✔ Compared ArrayList, LinkedList, HashSet, and HashMap
+- ✔ Implemented Radix Sort for Aadhaar numbers in AadharCardSystem
+- ✔ Maintained stable sorting
+- ✔ Applied Binary Search after sorting
+- ✔ Implemented Password Cracker using Backtracking
+- ✔ Generated all possible combinations
+- ✔ Used recursion with early stopping
+- ✔ Analyzed time and space complexity
+
+---
+
+### 🟢 21 January 2026 — Streams & Merge Sort (Scenario Based)
+- ✔ Learned Streams for functional-style data processing
+- ✔ Used Streams for filtering, mapping, and collecting data
+- ✔ Improved code readability using Stream pipelines
+- ✔ Understood lazy evaluation in Streams
+- ✔ Applied Streams on large datasets
+- ✔ Designed EduResults – Rank Sheet Generator
+- ✔ Used Merge Sort for large student datasets
+- ✔ Merged multiple sorted district-wise lists
+- ✔ Maintained stable sorting for duplicate scores
+- ✔ Handled large-scale data efficiently
+
+---
+
+### 🟢 22 January 2026 — Exception Handling
+- ✔ Learned exception handling concepts
+- ✔ Used try, catch, finally blocks
+- ✔ Understood checked vs unchecked exceptions
+- ✔ Created custom exceptions
+- ✔ Handled runtime failures gracefully
+- ✔ AmbulanceRoute – Emergency Patient Navigation
+- ✔ Modeled hospital units using Circular Linked List
+- ✔ Represented each hospital unit as a node
+- ✔ Rotated through units to find nearest available unit
+- ✔ Simulated patient redirection in circular path
+- ✔ Removed units dynamically during maintenance
+- ✔ Ensured continuous emergency flow handling
+
+---
 
 
 

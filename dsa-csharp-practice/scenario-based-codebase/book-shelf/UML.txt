@@ -1,0 +1,81 @@
+﻿+----------------------+
+|        Book          |
++----------------------+
+| - isbn   : string    |
+| - title  : string    |
+| - author : string    |
+| - genre  : string    |
++----------------------+
+| + ISBN   {get;set;}  |
+| + Title  {get;set;}  |
+| + Author {get;set;}  |
+| + Genre  {get;set;}  |
+| + ToString() : string|
++----------------------+
+
+           ▲
+           |
+           | uses
+           |
++----------------------+
+|        Node          |
++----------------------+
+| + data : Book        |
+| + next : Node        |
++----------------------+
+| + Node(Book)         |
++----------------------+
+
+           ▲
+           |
+           | manages
+           |
++-----------------------------------+
+|        LibraryService              |
++-----------------------------------+
+| - genres     : string[]            |
+| - lists      : Node[]              |
+| - genreCount : int                 |
++-----------------------------------+
+| + AddBook(Book)                    |
+| + RemoveBook(string)               |
+| + DisplayByGenre(string)           |
+| + DisplayAllBooks()                |
+| - FindGenreIndex(string) : int     |
+| - IsDuplicate(Node,string) : bool  |
++-----------------------------------+
+           ▲
+           |
+           | implements
+           |
++----------------------+
+|   ILibraryService    |
++----------------------+
+| + AddBook(Book)      |
+| + RemoveBook(string) |
+| + DisplayByGenre()   |
+| + DisplayAllBooks()  |
++----------------------+
+
+           ▲
+           |
+           | uses
+           |
++----------------------+
+|     LibraryMenu      |
++----------------------+
+| - service : ILibraryService |
++----------------------+
+| + ShowMenu()         |
+| - AddBookUI()        |
++----------------------+
+
+           ▲
+           |
+           | creates
+           |
++----------------------+
+|        Program       |
++----------------------+
+| + Main(string[])     |
++----------------------+
