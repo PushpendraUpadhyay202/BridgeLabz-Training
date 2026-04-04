@@ -1,3 +1,4 @@
+# BridgeLabz-Training
 # 🚀 BridgeLabz Training Journey
 
 ![.NET](https://img.shields.io/badge/.NET-8.0-purple?style=for-the-badge&logo=dotnet)
