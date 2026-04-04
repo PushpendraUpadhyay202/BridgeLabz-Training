@@ -1,0 +1,4 @@
+﻿interface IMealPlan
+{
+    void ShowDetails();
+}
