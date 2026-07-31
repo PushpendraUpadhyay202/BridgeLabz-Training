@@ -1,0 +1,85 @@
+                          HEALTHAPPDB ER DIAGRAM
+
++---------------------------+
+|         PATIENTS          |
++---------------------------+
+| PK  patient_id            |
+|     firstname             |
+|     lastname              |
+|     dob                   |
+|     gender                |
+|     phone (UNIQUE)        |
+|     blood_group           |
+|     address               |
++---------------------------+
+             |
+             | 1
+             |
+             | has
+             |
+             | M
++---------------------------+
+|      APPOINTMENTS         |
++---------------------------+
+| PK  appointment_id        |
+| FK  patient_id            |
+| FK  doctor_id             |
+|     appointmentdate       |
+|     appointmenttime       |
+|     status                |
++---------------------------+
+             ^
+             |
+             | M
+             |
+             | has
+             |
+             | 1
++---------------------------+
+|         DOCTORS           |
++---------------------------+
+| PK  doctor_id             |
+|     firstname             |
+|     lastname              |
+|     speciality            |
+|     phone (UNIQUE)        |
++---------------------------+
+
+
+RELATIONSHIPS
+---------------------------------------------------------
+PATIENTS
+    PK patient_id
+        │
+        │ 1
+        │
+        └──────────────< APPOINTMENTS >──────────────┐
+                       FK patient_id                 │
+                       FK doctor_id                  │
+                                                     │
+                                                     │ M
+                                                     │
+DOCTORS                                             │
+    PK doctor_id                                    │
+        │                                           │
+        │ 1                                         │
+        └───────────────────────────────────────────┘
+
+
+FOREIGN KEYS
+---------------------------------------------------------
+appointments.patient_id
+    → patients.patient_id
+    ON DELETE CASCADE
+
+appointments.doctor_id
+    → doctors.doctor_id
+    ON DELETE CASCADE
+
+
+CARDINALITY
+---------------------------------------------------------
+PATIENTS (1) --------< APPOINTMENTS >-------- (1) DOCTORS
+
+One Patient  → Many Appointments
+One Doctor   → Many Appointments
