@@ -12,9 +12,10 @@ namespace HealthClinicApp.Service
             using (SqlConnection connection = DBConnectionUtility.GetConnection())
             {
                 connection.Open();
-                string query = "INSERT INTO Patients (firstname, lastname, dob ,gender , phone , blood_group , address) VALUES (@FirstName, @LastName, @Dob, @Gender, @Phone, @BloodGroup, @Address)";
-                using (SqlCommand command = new SqlCommand(query, connection))
+                string procedureName = "sp_AddPatient";
+                using (SqlCommand command = new SqlCommand(procedureName, connection))
                 {
+                    command.CommandType = System.Data.CommandType.StoredProcedure;
                     command.Parameters.AddWithValue("@FirstName", patient.FirstName);
                     command.Parameters.AddWithValue("@LastName", patient.LastName);
                     command.Parameters.AddWithValue("@Dob", patient.Dob);
@@ -24,6 +25,7 @@ namespace HealthClinicApp.Service
                     command.Parameters.AddWithValue("@Address", patient.Address);
 
                     command.ExecuteNonQuery();
+
                 }
 
                 Console.WriteLine("Patient Added Successfully!");
@@ -35,14 +37,16 @@ namespace HealthClinicApp.Service
             using (SqlConnection connection = DBConnectionUtility.GetConnection())
             {
                 connection.Open();
-                string query = "SELECT * FROM Patients";
-                using (SqlCommand command = new SqlCommand(query, connection))
+                string procedureName = "sp_ViewPatient";
+                using (SqlCommand command = new SqlCommand(procedureName, connection))
                 {
+                    command.CommandType = System.Data.CommandType.StoredProcedure;
                     using (SqlDataReader reader = command.ExecuteReader())
                     {
+                        Console.WriteLine("\n================Patient List================\n");
                         while (reader.Read())
                         {
-                            Console.WriteLine($"ID: {reader["patient_id"]}, FirstName: {reader["firstname"]}, LastName: {reader["lastname"]}, DOB: {reader["dob"]}, Gender: {reader["gender"]}, Phone: {reader["phone"]}, Blood Group: {reader["blood_group"]}, Address: {reader["address"]}");
+                            Console.WriteLine($"ID: {reader["patient_id"]} , FirstName: {reader["firstname"]}, LastName: {reader["lastname"]}, Dob: {reader["dob"]}, Gender: {reader["gender"]}, Phone: {reader["phone"]}, BloodGroup: {reader["blood_group"]}, Address: {reader["address"]}");
                         }
                     }
                 }
@@ -54,13 +58,14 @@ namespace HealthClinicApp.Service
             using (SqlConnection connection = DBConnectionUtility.GetConnection())
             {
                 connection.Open();
-                string query = "UPDATE Patients SET firstname = @FirstName, dob = @Dob, address = @Address WHERE patient_id = @PatientId";
-                using (SqlCommand command = new SqlCommand(query, connection))
+                string procedureName = "sp_UpdatePatient";
+                using (SqlCommand command = new SqlCommand(procedureName, connection))
                 {
+                    command.CommandType = System.Data.CommandType.StoredProcedure;
+                    command.Parameters.AddWithValue("@PatientId", patient.PatientId);
                     command.Parameters.AddWithValue("@FirstName", patient.FirstName);
                     command.Parameters.AddWithValue("@Dob", patient.Dob);
                     command.Parameters.AddWithValue("@Address", patient.Address);
-                    command.Parameters.AddWithValue("@PatientId", patient.PatientId);
 
                     command.ExecuteNonQuery();
                 }
@@ -72,10 +77,12 @@ namespace HealthClinicApp.Service
             using (SqlConnection connection = DBConnectionUtility.GetConnection())
             {
                 connection.Open();
-                string query = "DELETE FROM Patients WHERE patient_id = @PatientId";
-                using (SqlCommand command = new SqlCommand(query, connection))
+                string procedureName = "sp_DeletePatient";
+                using (SqlCommand command = new SqlCommand(procedureName, connection))
                 {
+                    command.CommandType = System.Data.CommandType.StoredProcedure;
                     command.Parameters.AddWithValue("@PatientId", patientId);
+
                     command.ExecuteNonQuery();
                 }
             }
