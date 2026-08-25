@@ -1,0 +1,6 @@
+@AdvancedAddressBook_HostAddress = http://localhost:5027
+
+GET {{AdvancedAddressBook_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -124,6 +124,20 @@ This repository contains my day-wise practice, assignments, and projects complet
 
 ---
 
+## Day 9 - Entity Framework Core & Database Migrations
+### Topics Covered
+- Introduction to Entity Framework Core
+- Code First Approach
+- Database Migrations
+- DbContext & DbSet
+
+### Practice
+- Created Entity Framework Core Project
+- Implemented Code First Approach
+- Performed Database Migrations
+
+---
+
 ## Tech Stack
 
 - C#
